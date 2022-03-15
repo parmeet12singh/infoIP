@@ -18,7 +18,7 @@ def getIPInfo(ip):
 
 def IPInformation(request):
 
-    ip = request.META['HTTP_X_CLIENT_IP']
+    ip = request.META['HTTP_CLIENT_IP']
 
     IPInfomation = getIPInfo(ip)
     # print(IPInfomation)
@@ -40,7 +40,7 @@ def IPInformation(request):
 
 @api_view(['GET'])
 def IPInformationAPI(request):
-    ip = request.META['HTTP_X_CLIENT_IP']
+    ip = request.META['HTTP_CLIENT_IP']
 
     IPInfomation = getIPInfo(ip)
     # print(IPInfomation)
