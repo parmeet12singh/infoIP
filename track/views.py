@@ -18,7 +18,7 @@ def getIPInfo(ip):
 
 def IPInformation(request):
 
-    ip = request.META['HTTP_CLIENT_IP']
+    ip = request.META['HTTP_CLIENT_IP'].split(':')[0]
 
     IPInfomation = getIPInfo(ip)
     # print(IPInfomation)
